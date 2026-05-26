@@ -128,9 +128,9 @@ export const verifyOtp = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
 
-      secure: false,
+      secure: true,
 
-      sameSite: "lax",
+      sameSite: "none",
 
       path: "/",
 
@@ -240,9 +240,9 @@ export const login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
 
-      secure: false,
+      secure: true,
 
-      sameSite: "lax",
+      sameSite: "none",
 
       path: "/",
 
