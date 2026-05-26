@@ -20,7 +20,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: "https://realtime-chat-app-zeta-blue.vercel.app",
     credentials: true,
   },
 });
@@ -95,7 +95,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: "https://realtime-chat-app-zeta-blue.vercel.app",
     credentials: true,
   })
 );
